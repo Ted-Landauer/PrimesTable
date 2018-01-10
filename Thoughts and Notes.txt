@@ -1,0 +1,25 @@
+- Consider complexity. How fast does your code run?
+
+The complexity of my code appears to be exponential time. Generating a multiplication table for a low amounts of primes (<=1000) didn’t take me more than ten seconds however at 3000 primes it took one minute thirty seconds and at 5000 primes it took four minutes.
+
+This is not an ideal run time however I went with this because it is fairly memory efficient. Throughout the whole program I only used one array whose size is determined by the amount of primes wanted.
+
+If a better runtime is wanted there are changes that could be made. Things such as using another array or a more efficient data structure all together.
+
+You could also improve the isPrime method to take a list of numbers rather than calling it every time you want to see if a number is prime. That would require another array/data structure though and some way of either operating on it to remove non-primes and shift primes around or just copying to another list.
+
+My overall thought behind choosing to go with a memory efficient route was that if this were on a server, in some hosted environment, (from my experience) it’s better (cheaper) to ramp up the computing power to get things running faster rather than the memory.
+
+
+- How does it scale?
+
+In short, not great. It runs in exponential time but could be made to run in something closer to log(n). I actually looked it up for fun and the current most efficient way of finding primes runs in O((log n)^6). I also tried to find the runtime of the built in java libraries primality functions but had no real luck with that.
+
+If I were to do this again I would probably ask what is the program being used for, where is it going to be running, etc.
+
+If you want to run it constantly then a more memory efficient is probably better but if you only want to run it every so often then a faster implementation is probably better.
+
+
+- Consider cases where we want N primes.
+
+It wasn’t hard to make this program take N number of primes and I think it handles it decently at that. However in order to more appropriately handle N primes we would need an answer to the question "what is the program being used for."

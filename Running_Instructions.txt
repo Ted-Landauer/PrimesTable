@@ -1,0 +1,5 @@
+I used java to write this and it can be run on the command line by navigating to the bin folder and typing java Main into the command line.
+
+You will be given a prompt that asks how many primes you want. Enter a number and hit enter.
+
+A multiplicaion table for the given number of primes will then print out.
